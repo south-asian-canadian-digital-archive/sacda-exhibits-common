@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TypeScript support with proper type definitions
 - Demo page showcasing components
 - Complete documentation and usage examples
+- GitHub Packages configuration for organization-wide distribution
+- Comprehensive setup guide for GitHub Packages authentication and usage
 
 ### Fixed
 - Fixed navigation link hover effects by replacing undefined `nav-link` class with proper Tailwind utility classes
@@ -24,6 +26,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated Header component: Changed "CONTRIBUTE" button to "NEWSLETTER" with updated link
 - Updated Font Awesome integration to use FontAwesome Kit script for better icon support
 - Changed newsletter button styling to match other navigation links (removed special background styling)
+- **BREAKING**: Package name changed from `sacda-exhibits-common` to `@south-asian-canadian-digital-archive/sacda-exhibits-common` for GitHub Packages
+- Switched from npm registry to GitHub Packages for distribution
 
 ### Features
 - Responsive design for mobile, tablet, and desktop

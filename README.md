@@ -1,15 +1,34 @@
 # SACDA Exhibits Common Components
 
-A Svelte component library containing reusable UI components for SACDA (South Asian Canadian Digital Archive) exhibit applications.
+A Sve```svelte
+<script>
+  import { Header, Footer } from '@south-asian-canadian-digital-archive/sacda-exhibits-common';
+</script>
+
+<Header />
+```ponent library containing reusable UI components for SACDA (South Asian Canadian Digital Archive) exhibit applications.
 
 ## Installation
 
+This package is published to GitHub Packages. See [GITHUB_PACKAGES.md](./GITHUB_PACKAGES.md) for detailed setup instructions.
+
+### Quick Setup
+1. Create `.npmrc` in your project:
+```
+@south-asian-canadian-digital-archive:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```
+
+2. Set your GitHub token:
 ```bash
-npm install sacda-exhibits-common
+export NODE_AUTH_TOKEN=your_github_token_here
+```
+
+3. Install the package:
+```bash
+pnpm add @south-asian-canadian-digital-archive/sacda-exhibits-common
 # or
-pnpm add sacda-exhibits-common
-# or
-yarn add sacda-exhibits-common
+npm install @south-asian-canadian-digital-archive/sacda-exhibits-common
 ```
 
 ## Components
@@ -48,7 +67,7 @@ A footer component with sponsor logos and social media links.
 
 ```svelte
 <script>
-  import { Footer } from 'sacda-exhibits-common';
+  import { Footer } from '@south-asian-canadian-digital-archive/sacda-exhibits-common';
 </script>
 
 <Footer />
@@ -94,7 +113,7 @@ npm install @fortawesome/fontawesome-free
 This library includes TypeScript definitions. You can import types if needed:
 
 ```typescript
-import type { SponsorData, SocialData } from 'sacda-exhibits-common';
+import type { SponsorData, SocialData } from '@south-asian-canadian-digital-archive/sacda-exhibits-common';
 ```
 
 ## Development

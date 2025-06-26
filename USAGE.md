@@ -1,11 +1,13 @@
 # Usage Examples
 
+> **Note**: This package is published to GitHub Packages. See [GITHUB_PACKAGES.md](./GITHUB_PACKAGES.md) for authentication setup before installing.
+
 ## Basic Usage
 
 ```svelte
 <!-- App.svelte -->
 <script>
-  import { Header, Footer } from 'sacda-exhibits-common';
+  import { Header, Footer } from '@south-asian-canadian-digital-archive/sacda-exhibits-common';
 </script>
 
 <!-- Include Font Awesome in your app.html -->
@@ -26,7 +28,7 @@
 
 ```typescript
 // types.ts
-import type { SponsorData, SocialData } from 'sacda-exhibits-common';
+import type { SponsorData, SocialData } from '@south-asian-canadian-digital-archive/sacda-exhibits-common';
 
 // Use the types if you need to work with sponsor or social data
 const customSponsors: SponsorData[] = [
@@ -73,7 +75,7 @@ cd my-exhibit-app
 npm install
 
 # Install the SACDA components
-npm install sacda-exhibits-common
+npm install @south-asian-canadian-digital-archive/sacda-exhibits-common
 
 # Install TailwindCSS (if not already installed)
 npm install -D tailwindcss autoprefixer
@@ -87,7 +89,7 @@ Configure `tailwind.config.js`:
 export default {
   content: [
     './src/**/*.{html,js,svelte,ts}',
-    './node_modules/sacda-exhibits-common/**/*.{html,js,svelte,ts}'
+    './node_modules/@south-asian-canadian-digital-archive/sacda-exhibits-common/**/*.{html,js,svelte,ts}'
   ],
   theme: {
     extend: {},

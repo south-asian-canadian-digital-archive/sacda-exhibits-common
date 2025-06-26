@@ -1,5 +1,5 @@
 {
-	"name": "sacda-exhibits-common",
+	"name": "@south-asian-canadian-digital-archive/sacda-exhibits-common",
 	"version": "0.0.1",
 	"description": "Reusable Svelte components for SACDA (South Asian Canadian Digital Archive) exhibit applications",
 	"author": "South Asian Canadian Digital Archive",
@@ -9,9 +9,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sacda/sacda-exhibits-common.git"
+		"url": "git+https://github.com/south-asian-canadian-digital-archive/sacda-exhibits-common.git"
 	},
 	"homepage": "https://sacda.ca",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
