@@ -15,10 +15,13 @@
   transition: all 0.2s ease-in-out !important;
   text-decoration: none !important;
   display: inline-block !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
 }
 
 .sacda-header .sacda-nav-list .sacda-nav-item .sacda-nav-link:hover {
   border-bottom-color: var(--sacda-primary-color) !important;
+  color: #000000 !important;
 }
 
 /* Mobile navigation toggle button styles */
@@ -33,10 +36,12 @@
 /* Advanced search button styles */
 .sacda-header .sacda-advanced-search-btn {
   transition: background-color 0.2s ease-in-out !important;
+  color: #ffffff !important;
 }
 
 .sacda-header .sacda-advanced-search-btn:hover {
   background-color: var(--sacda-primary-color) !important;
+  color: #ffffff !important;
 }
 
 /* Ensure the component maintains its layout even with external CSS */
@@ -62,4 +67,33 @@
 .sacda-header .text-black { color: black !important; }
 .sacda-header .shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important; }
 
-/* Footer component styles - add as needed */
+/* Footer component styles */
+.sacda-footer {
+  --sacda-accent-color: #ffce34;
+  background-color: #414042 !important;
+}
+
+.sacda-footer p {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.sacda-footer a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+.sacda-footer a:hover {
+  color: var(--sacda-accent-color) !important;
+}
+
+.sacda-footer .fa {
+  color: #ffffff !important;
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro', FontAwesome !important;
+  font-weight: 900 !important;
+}
+
+.sacda-footer * {
+  box-sizing: border-box !important;
+}

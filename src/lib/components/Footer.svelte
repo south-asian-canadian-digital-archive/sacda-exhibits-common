@@ -69,7 +69,7 @@
 </svelte:head>
 
 <footer
-	class="relative flex flex-col-reverse items-end justify-between gap-4 bg-[#414042] px-6 pt-10 pb-24 md:flex-row md:py-24 lg:flex-row lg:py-24"
+	class="sacda-footer relative flex flex-col-reverse items-end justify-between gap-4 bg-[#414042] px-6 pt-10 pb-24 md:flex-row md:py-24 lg:flex-row lg:py-24"
 >
 	<div class="flex flex-row items-center gap-5 pb-3">
 		{#each sponsors as sponsor}
@@ -116,3 +116,40 @@
 		Digital Archive
 	</div>
 </footer>
+
+<style>
+	/* SACDA Footer Component Styles - High specificity to prevent overrides */
+	:global(.sacda-footer) {
+		--sacda-accent-color: #ffce34;
+		background-color: #414042 !important;
+	}
+
+	/* Footer text styles */
+	:global(.sacda-footer p) {
+		color: #ffffff !important;
+		font-weight: 700 !important;
+	}
+
+	/* Footer link styles */
+	:global(.sacda-footer a) {
+		color: #ffffff !important;
+		text-decoration: none !important;
+		transition: color 0.2s ease-in-out !important;
+	}
+
+	:global(.sacda-footer a:hover) {
+		color: var(--sacda-accent-color) !important;
+	}
+
+	/* Social media icon styles */
+	:global(.sacda-footer .fa) {
+		color: #ffffff !important;
+		font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro', FontAwesome !important;
+		font-weight: 900 !important;
+	}
+
+	/* Ensure component maintains layout */
+	:global(.sacda-footer *) {
+		box-sizing: border-box !important;
+	}
+</style>

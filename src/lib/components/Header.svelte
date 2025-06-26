@@ -100,10 +100,13 @@
 		transition: all 0.2s ease-in-out !important;
 		text-decoration: none !important;
 		display: inline-block !important;
+		color: #000000 !important;
+		font-weight: 600 !important;
 	}
 
 	:global(.sacda-header .sacda-nav-list .sacda-nav-item .sacda-nav-link:hover) {
 		border-bottom-color: var(--sacda-primary-color) !important;
+		color: #000000 !important;
 	}
 
 	/* Mobile navigation toggle button styles */
@@ -118,10 +121,12 @@
 	/* Advanced search button styles */
 	:global(.sacda-header .sacda-advanced-search-btn) {
 		transition: background-color 0.2s ease-in-out !important;
+		color: #ffffff !important;
 	}
 
 	:global(.sacda-header .sacda-advanced-search-btn:hover) {
 		background-color: var(--sacda-primary-color) !important;
+		color: #ffffff !important;
 	}
 
 	/* Ensure the component maintains its layout even with external CSS */
