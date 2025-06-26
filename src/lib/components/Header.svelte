@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import { scale, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
+	import Logo from '$lib/icons/Logo.svelte';
 
-	function searchButton() {}
+	let search = $state('');
+	let mobileNavButtonWidth: number = $state(0);
 
-	let search = '';
-	let mobileNavButtonWidth: number;
+	let mobileNavOpen = $state(false);
+	
 
-	$: mobileNavOpen = false;
-
-	$: {
-		mobileNavButtonWidth;
-	}
+	// run(() => {
+	// 	mobileNavButtonWidth;
+	// });
 </script>
 
 <nav
@@ -19,17 +18,13 @@
 >
 	<div class="w-full md:w-fit lg:w-fit">
 		<a class="" href="https://sacda.ca/index.php">
-			<img
-				src="https://sacda.ca/themes/sacda/assets/pawtucket/graphics/logo.svg"
-				alt=""
-				class="w-64"
-			/>
+			<Logo class="w-64" />
 		</a>
 
 		<button
 			class="absolute top-0 right-10 bg-[#F99D2A] px-8 py-10 md:hidden lg:hidden"
 			bind:clientWidth={mobileNavButtonWidth}
-			on:click={() => (mobileNavOpen = !mobileNavOpen)}
+			onclick={() => (mobileNavOpen = !mobileNavOpen)}
 		>
 			{#if mobileNavOpen}
 				<span class="fa fa-times scale-150"></span>
@@ -89,10 +84,3 @@
 		</div>
 	{/if}
 </nav>
-
-<!-- <style type="postcss">
-	@reference "../../app.css";
-	.nav-item a {
-		@apply ;
-	}
-</style> -->
