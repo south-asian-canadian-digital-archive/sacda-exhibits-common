@@ -1,0 +1,33 @@
+# Development files
+src/
+.svelte-kit/
+build/
+node_modules/
+.env
+.env.*
+
+# Build configuration
+vite.config.ts
+svelte.config.js
+tsconfig.json
+tailwind.config.js
+
+# Development tools
+.prettierrc
+.eslintrc.cjs
+.gitignore
+
+# Documentation (already in files field in package.json)
+CHANGELOG.md
+
+# Test files
+**/*.test.*
+**/*.spec.*
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
