@@ -1,0 +1,16 @@
+/* SACDA Exhibits Common Components CSS */
+/* Import this file in your project for proper styling */
+
+/* Header component styles */
+.nav-item a {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.25rem;
+  transition: border-color 200ms;
+}
+
+.nav-item a:hover {
+  border-bottom-color: #F99D2A;
+}
+
+/* Footer component styles - if needed */
+/* Add any additional component styles here */

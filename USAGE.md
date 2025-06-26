@@ -8,6 +8,8 @@
 <!-- App.svelte -->
 <script>
   import { Header, Footer } from '@south-asian-canadian-digital-archive/sacda-exhibits-common';
+  // Optional: Import component styles manually if TailwindCSS isn't processing them
+  import '@south-asian-canadian-digital-archive/sacda-exhibits-common/dist/components.css';
 </script>
 
 <!-- Include Font Awesome in your app.html -->

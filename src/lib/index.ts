@@ -3,3 +3,6 @@ export { Header, Footer } from './components/index.js';
 
 // Export types
 export type { SponsorData, SocialData } from './types.js';
+
+// Export CSS for manual import if needed
+export const componentStyles = './components.css';

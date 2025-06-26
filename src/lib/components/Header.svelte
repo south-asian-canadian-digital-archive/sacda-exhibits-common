@@ -84,3 +84,10 @@
 		</div>
 	{/if}
 </nav>
+
+<style type="postcss">
+	@reference "../../app.css";
+	.nav-item a {
+		@apply border-b-2 border-b-transparent pb-1 transition-colors duration-200 hover:border-b-[#F99D2A];
+	}
+</style>

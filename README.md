@@ -88,6 +88,22 @@ These components use TailwindCSS classes and expect Font Awesome icons to be ava
 
 Install and configure TailwindCSS in your project following the [official guide](https://tailwindcss.com/docs/guides/sveltekit).
 
+**Important**: Include the component library in your TailwindCSS content configuration:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+    './node_modules/@south-asian-canadian-digital-archive/sacda-exhibits-common/**/*.{html,js,svelte,ts}'
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
 ### Font Awesome
 
 Include Font Awesome kit in your app.html:
@@ -106,6 +122,19 @@ Or install it as a dependency:
 
 ```bash
 npm install @fortawesome/fontawesome-free
+```
+
+### Component Styles
+
+If you're experiencing issues with component styles not loading, you have two options:
+
+#### Option 1: Ensure TailwindCSS processes the component library
+Make sure your `tailwind.config.js` includes the component library in the content paths (see TailwindCSS section above).
+
+#### Option 2: Import component styles manually
+```javascript
+// In your main app file or layout
+import '@south-asian-canadian-digital-archive/sacda-exhibits-common/dist/components.css';
 ```
 
 ## TypeScript Support
