@@ -63,7 +63,7 @@
 				>
 			</div>
 
-			<ul class="flex flex-col items-center gap-4 md:flex-row lg:flex-row">
+			<ul class="flex flex-col items-center gap-4 md:flex-row lg:flex-row **:border-b-2 **:border-b-transparent **:pb-1 **:transition-all **:duration-200 **:hover:border-b-[#F99D2A]">
 				<li class="nav-item">
 					<a class="" href="https://sacda.ca/index.php/Browse/objects">BROWSE </a>
 				</li>
@@ -90,9 +90,9 @@
 	{/if}
 </nav>
 
-<style type="postcss">
+<!-- <style type="postcss">
 	@reference "../../app.css";
 	.nav-item a {
-		@apply border-b-2 border-b-transparent pb-1 transition-colors duration-200 hover:border-b-[#F99D2A];
+		@apply ;
 	}
-</style>
+</style> -->
