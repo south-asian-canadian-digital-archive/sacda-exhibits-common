@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed navigation link hover effects by replacing undefined `nav-link` class with proper Tailwind utility classes
 - Navigation links now properly show orange bottom border on hover with smooth transition
+- Fixed pnpm lockfile configuration mismatch to resolve CI/CD build issues
 
 ### Changed
 - Updated Header component: Changed "CONTRIBUTE" button to "NEWSLETTER" with updated link
