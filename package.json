@@ -1,6 +1,6 @@
 {
 	"name": "@south-asian-canadian-digital-archive/sacda-exhibits-common",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "Reusable Svelte components for SACDA (South Asian Canadian Digital Archive) exhibit applications",
 	"author": "South Asian Canadian Digital Archive",
 	"license": "MIT",
@@ -45,7 +45,8 @@
 	},
 	"peerDependencies": {
 		"@sveltejs/kit": "^2.0.0",
-		"svelte": "^5.0.0"
+		"svelte": "^5.0.0",
+		"tailwindcss": "^4.0.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
