@@ -126,16 +126,23 @@ npm install @fortawesome/fontawesome-free
 
 ### Component Styles
 
-If you're experiencing issues with component styles not loading, you have two options:
+The components use a combination of TailwindCSS classes and custom CSS for styling. To ensure styles work properly in your consuming project:
 
-#### Option 1: Ensure TailwindCSS processes the component library
-Make sure your `tailwind.config.js` includes the component library in the content paths (see TailwindCSS section above).
+#### Method 1: Automatic Import (Recommended)
+The component styles are automatically imported when you import the components. This should work for most use cases.
 
-#### Option 2: Import component styles manually
+#### Method 2: Manual Import (For styling issues)
+If you're experiencing issues with component styles not loading or being overridden by your project's CSS, manually import the component styles:
+
 ```javascript
-// In your main app file or layout
+// In your main app file, layout, or app.css
 import '@south-asian-canadian-digital-archive/sacda-exhibits-common/dist/components.css';
 ```
+
+#### Method 3: Custom CSS Integration
+For maximum compatibility, you can copy the CSS from `components.css` and integrate it into your project's CSS with your own modifications.
+
+**Note:** The component styles use high-specificity selectors and `!important` declarations to prevent them from being overridden by common CSS patterns in consuming projects.
 
 ## TypeScript Support
 

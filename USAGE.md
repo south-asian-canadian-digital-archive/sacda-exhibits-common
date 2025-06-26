@@ -112,3 +112,56 @@ If you need to override styles, you can use TailwindCSS utilities or custom CSS:
   }
 </style>
 ```
+
+## Troubleshooting Style Issues
+
+If the component styles aren't loading properly or are being overridden by your project's CSS, try these solutions:
+
+### Solution 1: Import CSS Manually
+
+```javascript
+// In your main app file, layout, or app.css
+import '@south-asian-canadian-digital-archive/sacda-exhibits-common/dist/components.css';
+```
+
+### Solution 2: Ensure TailwindCSS Processing
+
+Make sure your `tailwind.config.js` includes the component library:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+    './node_modules/@south-asian-canadian-digital-archive/sacda-exhibits-common/**/*.{html,js,svelte,ts}'
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+### Solution 3: Override with Higher Specificity
+
+If you need to customize styles, use the same class structure:
+
+```css
+/* Your custom CSS */
+.sacda-header .sacda-nav-list .sacda-nav-item .sacda-nav-link {
+  color: your-custom-color !important;
+}
+```
+
+### Solution 4: Check CSS Load Order
+
+Ensure the component CSS loads before your custom CSS:
+
+```svelte
+<script>
+  // Component CSS loads first
+  import '@south-asian-canadian-digital-archive/sacda-exhibits-common/dist/components.css';
+  // Your custom CSS loads after
+  import './custom-styles.css';
+</script>
+```

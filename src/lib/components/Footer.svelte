@@ -63,6 +63,11 @@
 	];
 </script>
 
+
+<svelte:head>
+	<script src="https://kit.fontawesome.com/30f055fc02.js" crossorigin="anonymous"></script>
+</svelte:head>
+
 <footer
 	class="relative flex flex-col-reverse items-end justify-between gap-4 bg-[#414042] px-6 pt-10 pb-24 md:flex-row md:py-24 lg:flex-row lg:py-24"
 >

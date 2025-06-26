@@ -14,7 +14,7 @@
 </script>
 
 <nav
-	class="top-0 z-[999] mb-2 flex flex-col items-center justify-between bg-white px-10 pt-9 pb-6 font-semibold text-black shadow-md md:flex-row lg:flex-row"
+	class="sacda-header top-0 z-[999] mb-2 flex flex-col items-center justify-between bg-white px-10 pt-9 pb-6 font-semibold text-black shadow-md md:flex-row lg:flex-row"
 >
 	<div class="w-full md:w-fit lg:w-fit">
 		<a class="" href="https://sacda.ca/index.php">
@@ -22,7 +22,7 @@
 		</a>
 
 		<button
-			class="absolute top-0 right-10 bg-[#F99D2A] px-8 py-10 md:hidden lg:hidden"
+			class="sacda-mobile-nav-toggle absolute top-0 right-10 bg-[#F99D2A] px-8 py-10 md:hidden lg:hidden"
 			bind:clientWidth={mobileNavButtonWidth}
 			onclick={() => (mobileNavOpen = !mobileNavOpen)}
 		>
@@ -35,7 +35,7 @@
 	</div>
 
 	{#if mobileNavButtonWidth == 0 || mobileNavOpen}
-		<div transition:slide class="flex-col items-end gap-4 md:flex lg:flex">
+		<div transition:slide class="sacda-nav-content flex-col items-end gap-4 md:flex lg:flex">
 			<div class="flex flex-row items-center gap-4 py-8 md:py-0 lg:py-0">
 				<div class="flex">
 					<input
@@ -52,42 +52,86 @@
 					</a>
 				</div>
 				<a
-					class="hidden md:flex md:bg-[#414042] md:px-6 md:py-2 md:text-white md:hover:bg-[#F99D2A] lg:flex lg:bg-[#414042] lg:px-6 lg:py-2 lg:text-white lg:hover:bg-[#F99D2A]"
+					class="sacda-advanced-search-btn hidden md:flex md:bg-[#414042] md:px-6 md:py-2 md:text-white md:hover:bg-[#F99D2A] lg:flex lg:bg-[#414042] lg:px-6 lg:py-2 lg:text-white lg:hover:bg-[#F99D2A]"
 					href="https://sacda.ca/index.php/Search/advanced/objects"
 					role="button">ADVANCED SEARCH</a
 				>
 			</div>
 
-			<ul class="flex flex-col items-center gap-4 md:flex-row lg:flex-row **:border-b-2 **:border-b-transparent **:pb-1 **:transition-all **:duration-200 **:hover:border-b-[#F99D2A]">
-				<li class="nav-item">
-					<a class="" href="https://sacda.ca/index.php/Browse/objects">BROWSE </a>
+			<ul class="sacda-nav-list flex flex-col items-center gap-4 md:flex-row lg:flex-row">
+				<li class="sacda-nav-item">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/Browse/objects">BROWSE </a>
 				</li>
-				<li class="nav-item">
-					<a class="" href="https://sacda.ca/index.php/Collections/index">COLLECTIONS</a>
+				<li class="sacda-nav-item">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/Collections/index">COLLECTIONS</a>
 				</li>
-				<li class="nav-item">
-					<a class="" href="https://sacda.ca/index.php/exhibits/index">EXHIBITS</a>
+				<li class="sacda-nav-item">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/exhibits/index">EXHIBITS</a>
 				</li>
-				<li class="nav-item">
-					<a class="" href="https://sacda.ca/index.php/About/Index">ABOUT</a>
+				<li class="sacda-nav-item">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/About/Index">ABOUT</a>
 				</li>
-				<li class="nav-item">
-					<a class="" href="https://sacda.ca/index.php/Contact/Form">CONTACT</a>
+				<li class="sacda-nav-item">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/Contact/Form">CONTACT</a>
 				</li>
-				<li class="nav-item">
-					<a class="" href="https://sacda.ca/index.php/newsletter">NEWSLETTER</a>
+				<li class="sacda-nav-item">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/newsletter">NEWSLETTER</a>
 				</li>
-				<li class="nav-item md:hidden lg:hidden">
-					<a class="" href="https://sacda.ca/index.php/Search/advanced/objects">ADVANCED SEARCH</a>
+				<li class="sacda-nav-item md:hidden lg:hidden">
+					<a class="sacda-nav-link" href="https://sacda.ca/index.php/Search/advanced/objects">ADVANCED SEARCH</a>
 				</li>
 			</ul>
 		</div>
 	{/if}
 </nav>
 
-<!-- <style type="postcss">
-	@reference "../../app.css";
-	.nav-item a {
-		@apply border-b-2 border-b-transparent pb-1 transition-colors duration-200 hover:border-b-[#F99D2A];
+<style>
+	/* SACDA Header Component Styles - High specificity to prevent overrides */
+	:global(.sacda-header) {
+		--sacda-primary-color: #F99D2A;
+		--sacda-secondary-color: #414042;
+		--sacda-light-color: #FFEDC2;
 	}
-</style> -->
+
+	/* Navigation link styles with high specificity */
+	:global(.sacda-header .sacda-nav-list .sacda-nav-item .sacda-nav-link) {
+		border-bottom: 2px solid transparent !important;
+		padding-bottom: 0.25rem !important;
+		transition: all 0.2s ease-in-out !important;
+		text-decoration: none !important;
+		display: inline-block !important;
+	}
+
+	:global(.sacda-header .sacda-nav-list .sacda-nav-item .sacda-nav-link:hover) {
+		border-bottom-color: var(--sacda-primary-color) !important;
+	}
+
+	/* Mobile navigation toggle button styles */
+	:global(.sacda-header .sacda-mobile-nav-toggle) {
+		transition: background-color 0.2s ease-in-out !important;
+	}
+
+	:global(.sacda-header .sacda-mobile-nav-toggle:hover) {
+		background-color: var(--sacda-secondary-color) !important;
+	}
+
+	/* Advanced search button styles */
+	:global(.sacda-header .sacda-advanced-search-btn) {
+		transition: background-color 0.2s ease-in-out !important;
+	}
+
+	:global(.sacda-header .sacda-advanced-search-btn:hover) {
+		background-color: var(--sacda-primary-color) !important;
+	}
+
+	/* Ensure the component maintains its layout even with external CSS */
+	:global(.sacda-header *) {
+		box-sizing: border-box !important;
+	}
+
+	/* Font Awesome icon protection */
+	:global(.sacda-header .fa) {
+		font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro', FontAwesome !important;
+		font-weight: 900 !important;
+	}
+</style>
